@@ -1,0 +1,267 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/stan/ontologies/2022/3/untitled-ontology-10#"
+     xml:base="http://www.semanticweb.org/stan/ontologies/2022/3/untitled-ontology-10"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/stan/ontologies/2022/3/untitled-ontology-10"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/stan/ontologies/2022/3/untitled-ontology-10#studies -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/stan/ontologies/2022/3/untitled-ontology-10#studies">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/stan/ontologies/2022/3/untitled-ontology-10#Student"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/stan/ontologies/2022/3/untitled-ontology-10#Module"/>
+        <owl:propertyDisjointWith rdf:resource="http://www.semanticweb.org/stan/ontologies/2022/3/untitled-ontology-10#teaches"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/stan/ontologies/2022/3/untitled-ontology-10#teaches -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/stan/ontologies/2022/3/untitled-ontology-10#teaches">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/stan/ontologies/2022/3/untitled-ontology-10#Lecturer"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/stan/ontologies/2022/3/untitled-ontology-10#Module"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/stan/ontologies/2022/3/untitled-ontology-10#first_name -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/stan/ontologies/2022/3/untitled-ontology-10#first_name">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/stan/ontologies/2022/3/untitled-ontology-10#Person"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/stan/ontologies/2022/3/untitled-ontology-10#last_name -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/stan/ontologies/2022/3/untitled-ontology-10#last_name">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/stan/ontologies/2022/3/untitled-ontology-10#Person"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/stan/ontologies/2022/3/untitled-ontology-10#staff_id -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/stan/ontologies/2022/3/untitled-ontology-10#staff_id">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/stan/ontologies/2022/3/untitled-ontology-10#Lecturer"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/stan/ontologies/2022/3/untitled-ontology-10#student_id -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/stan/ontologies/2022/3/untitled-ontology-10#student_id">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/stan/ontologies/2022/3/untitled-ontology-10#Student"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/stan/ontologies/2022/3/untitled-ontology-10#CSModule -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/stan/ontologies/2022/3/untitled-ontology-10#CSModule">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/stan/ontologies/2022/3/untitled-ontology-10#Module"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/stan/ontologies/2022/3/untitled-ontology-10#Lecturer"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/stan/ontologies/2022/3/untitled-ontology-10#MathMode"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/stan/ontologies/2022/3/untitled-ontology-10#Student"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/stan/ontologies/2022/3/untitled-ontology-10#Lecturer -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/stan/ontologies/2022/3/untitled-ontology-10#Lecturer">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/stan/ontologies/2022/3/untitled-ontology-10#Person"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/stan/ontologies/2022/3/untitled-ontology-10#MathMode -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/stan/ontologies/2022/3/untitled-ontology-10#MathMode">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/stan/ontologies/2022/3/untitled-ontology-10#Module"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/stan/ontologies/2022/3/untitled-ontology-10#Module -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/stan/ontologies/2022/3/untitled-ontology-10#Module">
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/stan/ontologies/2022/3/untitled-ontology-10#Person"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/stan/ontologies/2022/3/untitled-ontology-10#Person -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/stan/ontologies/2022/3/untitled-ontology-10#Person"/>
+    
+
+
+    <!-- http://www.semanticweb.org/stan/ontologies/2022/3/untitled-ontology-10#Student -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/stan/ontologies/2022/3/untitled-ontology-10#Student">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/stan/ontologies/2022/3/untitled-ontology-10#Person"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/stan/ontologies/2022/3/untitled-ontology-10#CS101 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/stan/ontologies/2022/3/untitled-ontology-10#CS101">
+        <rdf:type rdf:resource="http://www.semanticweb.org/stan/ontologies/2022/3/untitled-ontology-10#CSModule"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/stan/ontologies/2022/3/untitled-ontology-10#CS103 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/stan/ontologies/2022/3/untitled-ontology-10#CS103">
+        <rdf:type rdf:resource="http://www.semanticweb.org/stan/ontologies/2022/3/untitled-ontology-10#CSModule"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/stan/ontologies/2022/3/untitled-ontology-10#Lecturer1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/stan/ontologies/2022/3/untitled-ontology-10#Lecturer1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/stan/ontologies/2022/3/untitled-ontology-10#Lecturer"/>
+        <teaches rdf:resource="http://www.semanticweb.org/stan/ontologies/2022/3/untitled-ontology-10#CS103"/>
+        <teaches rdf:resource="http://www.semanticweb.org/stan/ontologies/2022/3/untitled-ontology-10#M201"/>
+        <first_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Larisa</first_name>
+        <last_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sodatova</last_name>
+        <staff_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">417686</staff_id>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/stan/ontologies/2022/3/untitled-ontology-10#Lecturer2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/stan/ontologies/2022/3/untitled-ontology-10#Lecturer2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/stan/ontologies/2022/3/untitled-ontology-10#Lecturer"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/stan/ontologies/2022/3/untitled-ontology-10#M201 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/stan/ontologies/2022/3/untitled-ontology-10#M201">
+        <rdf:type rdf:resource="http://www.semanticweb.org/stan/ontologies/2022/3/untitled-ontology-10#MathMode"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/stan/ontologies/2022/3/untitled-ontology-10#M204 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/stan/ontologies/2022/3/untitled-ontology-10#M204">
+        <rdf:type rdf:resource="http://www.semanticweb.org/stan/ontologies/2022/3/untitled-ontology-10#MathMode"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/stan/ontologies/2022/3/untitled-ontology-10#Student1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/stan/ontologies/2022/3/untitled-ontology-10#Student1">
+        <studies rdf:resource="http://www.semanticweb.org/stan/ontologies/2022/3/untitled-ontology-10#CS101"/>
+        <studies rdf:resource="http://www.semanticweb.org/stan/ontologies/2022/3/untitled-ontology-10#M201"/>
+        <studies rdf:resource="http://www.semanticweb.org/stan/ontologies/2022/3/untitled-ontology-10#M204"/>
+        <first_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Joseph</first_name>
+        <last_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Baker</last_name>
+        <student_id rdf:datatype="http://www.w3.org/2001/XMLSchema#int">266814</student_id>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/stan/ontologies/2022/3/untitled-ontology-10#Student2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/stan/ontologies/2022/3/untitled-ontology-10#Student2">
+        <studies rdf:resource="http://www.semanticweb.org/stan/ontologies/2022/3/untitled-ontology-10#M204"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/stan/ontologies/2022/3/untitled-ontology-10#Student3 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/stan/ontologies/2022/3/untitled-ontology-10#Student3">
+        <studies rdf:resource="http://www.semanticweb.org/stan/ontologies/2022/3/untitled-ontology-10#CS103"/>
+        <studies rdf:resource="http://www.semanticweb.org/stan/ontologies/2022/3/untitled-ontology-10#M201"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/stan/ontologies/2022/3/untitled-ontology-10#Lecturer"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/stan/ontologies/2022/3/untitled-ontology-10#MathMode"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/stan/ontologies/2022/3/untitled-ontology-10#Student"/>
+        </owl:members>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+
